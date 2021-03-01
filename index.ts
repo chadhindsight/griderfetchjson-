@@ -5,7 +5,7 @@ const url = 'https://jsonplaceholder.typicode.com/todos/1';
 // Label the type of data that each property references
 interface Todo {
     id: number;
-    title: string;
+    name: string;
     completed: boolean;
 }
 
@@ -13,16 +13,16 @@ axios.get(url).then(response => {
     const todo = response.data as Todo;
 
     const id = todo.id;
-    const title = todo.title;
+    const name = todo.name;
     const completed = todo.completed;
 
-    logTodo(id, title, completed);
+    logTodo(id, name, completed);
 });
 
-const logTodo = (id: number, title: string, completed: boolean) => {
+const logTodo = (id: number, name: string, completed: boolean) => {
     console.log(`
     The Todo with ID: ${id}
-    Has a title of: ${title}
+    Has a name of: ${name}
     Is it finished? ${completed}
   `);
 };
