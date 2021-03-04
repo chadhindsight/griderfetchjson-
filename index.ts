@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
-// Label the type of data that each property references. Pointless
+// Label the type of data that each property references. 
 interface Todo {
     id: number;
     name: string;
